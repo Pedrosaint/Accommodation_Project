@@ -21,14 +21,14 @@ const UserType = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-6">
+    <div className="min-h-screen flex items-center justify-center p-2 md:p-6">
       <div className="bg-white rounded-4xl shadow p-8 max-w-2xl w-full">
         {/* Header */}
         <div className="text-center mb-10">
-          <h2 className="text-3xl font-bold text-gray-800 mb-3">
+          <h2 className="text-lg md:text-3xl font-bold text-gray-800 mb-3">
             Join as a Student or Lodge Owner
           </h2>
-          <p className="text-gray-600 text-lg">
+          <p className="text-gray-600 md:text-lg">
             Select your account type to get started
           </p>
         </div>
@@ -214,7 +214,7 @@ const UserType = () => {
 
         {/* Continue Button */}
         <button
-          className={`w-full py-4 px-6 rounded-xl font-semibold text-lg transition-all duration-300 cursor-pointer ${
+          className={`w-full py-4 px-6 rounded-xl font-semibold whitespace-nowrap md:text-lg transition-all duration-300 cursor-pointer ${
             selectedType
               ? "bg-linear-to-r from-blue-600 to-purple-600 text-white hover:from-blue-700 hover:to-purple-700 transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
               : "bg-gray-300 text-gray-500 cursor-not-allowed"
@@ -230,11 +230,13 @@ const UserType = () => {
         </button>
 
         {/* Login Link */}
-        <div className="text-center mt-6">
+        <div
+        onClick={() => navigate('/auth/login')}
+         className="text-center mt-6">
           <p className="text-gray-600">
             Already have an account?{" "}
             <a
-              href="/login"
+              href="/auth/login"
               className="text-blue-600 font-semibold hover:text-blue-700 hover:underline"
             >
               Sign In

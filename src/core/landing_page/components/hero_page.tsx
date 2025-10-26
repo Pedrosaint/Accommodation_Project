@@ -32,7 +32,7 @@ const HeroPage = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 py-20">
+      <div className="relative z-10 container mx-auto px-6 py-22">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8 animate-fade-in-up">
@@ -45,7 +45,7 @@ const HeroPage = () => {
             </div>
 
             {/* Main Heading */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
               Find Your Perfect{" "}
               <span className="text-transparent bg-clip-text bg-linear-to-r from-yellow-400 to-orange-500 animate-gradient">
                 Student
@@ -151,16 +151,6 @@ const HeroPage = () => {
               <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-yellow-400/20 rounded-full blur-3xl"></div>
               <div className="absolute -top-6 -right-6 w-40 h-40 bg-blue-400/20 rounded-full blur-3xl"></div>
             </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="flex flex-col items-center gap-2 text-white/80">
-          <span className="text-sm">Scroll to explore</span>
-          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center p-2">
-            <div className="w-1 h-3 bg-white rounded-full animate-scroll"></div>
           </div>
         </div>
       </div>

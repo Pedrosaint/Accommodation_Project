@@ -87,7 +87,7 @@ const LodgeOwnerCTA = () => {
             </div>
 
             {/* Headline */}
-            <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+            <h2 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
               Are You a{" "}
               <span className="text-transparent bg-clip-text bg-linear-to-r from-yellow-400 via-orange-500 to-pink-500 animate-linear">
                 Lodge Owner?
