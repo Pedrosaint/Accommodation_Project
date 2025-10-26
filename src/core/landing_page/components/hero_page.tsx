@@ -1,11 +1,14 @@
 import { Search, MapPin, Home, ChevronRight } from "lucide-react";
+import bgImageUrl from "../../../assets/images/image-1.jpg";
+import { useNavigate } from "react-router-dom";
 
 const HeroPage = () => {
+  const navigate = useNavigate();
   return (
     <section
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{
-        backgroundImage: `url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=2070')`,
+        backgroundImage: `url(${bgImageUrl})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundAttachment: "fixed",
@@ -40,7 +43,7 @@ const HeroPage = () => {
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full">
               <Home className="w-4 h-4 text-yellow-400" />
               <span className="text-sm font-medium text-white">
-                🏠 Nigeria's #1 Student Accommodation Platform
+                Nigeria's #1 Student Accommodation Platform
               </span>
             </div>
 
@@ -98,11 +101,15 @@ const HeroPage = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 pt-4">
-              <button className="px-8 py-4 bg-white text-blue-700 rounded-xl font-bold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105 flex items-center justify-center gap-2">
+              <button
+               onClick={() => navigate("/auth/user_type")}
+               className="px-8 py-4 bg-white text-blue-700 rounded-xl font-bold hover:bg-gray-100 transition-all duration-300 shadow-lg hover:shadow-2xl transform hover:scale-105 flex items-center justify-center gap-2">
                 <span>Get Started</span>
                 <ChevronRight className="w-5 h-5" />
               </button>
-              <button className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl font-bold hover:bg-white hover:text-blue-700 transition-all duration-300 flex items-center justify-center gap-2">
+              <button 
+              onClick={() => navigate("/auth/user_type")}
+              className="px-8 py-4 bg-transparent border-2 border-white text-white rounded-xl font-bold hover:bg-white hover:text-blue-700 transition-all duration-300 flex items-center justify-center gap-2">
                 <span>List Your Property</span>
               </button>
             </div>
@@ -135,7 +142,12 @@ const HeroPage = () => {
                       <span className="text-3xl font-bold">₦250k</span>
                       <span className="text-gray-300">/year</span>
                     </div>
-                    <button className="px-6 py-2 bg-linear-to-r from-yellow-400 to-orange-500 text-white rounded-lg font-semibold hover:shadow-lg transition-all">
+                    <button
+                      onClick={() =>
+                        navigate(`/view_accommodation/:id`)
+                      }
+                      className="px-6 py-2 bg-linear-to-r from-yellow-400 to-orange-500 text-white rounded-lg font-semibold hover:shadow-lg transition-all"
+                    >
                       View Details
                     </button>
                   </div>
@@ -143,8 +155,8 @@ const HeroPage = () => {
               </div>
 
               {/* Floating Badge */}
-              <div className="absolute -top-4 -right-4 bg-yellow-400 text-blue-900 px-6 py-3 rounded-full font-bold shadow-xl animate-bounce">
-                ⭐ Top Rated
+              <div className="absolute -top-4 -right-4 bg-yellow-400 text-blue-900 px-4 py-2 rounded-full font-bold shadow-xl">
+                Top Rated
               </div>
 
               {/* Decorative Elements */}

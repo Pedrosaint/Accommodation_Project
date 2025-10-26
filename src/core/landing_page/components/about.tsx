@@ -1,3 +1,49 @@
+import { BarChart3, Gauge, Home, MessageCircle, MinusSquareIcon, RefreshCw, Search, Smartphone, Trophy, Wallet, Zap, Lock } from "lucide-react";
+
+
+const features = [
+  {
+    icon: <Zap className="w-6 h-6 text-indigo-100" />,
+    title: "Fast & Easy",
+    desc: "Quick booking process",
+  },
+  {
+    icon: <Wallet className="w-6 h-6 text-indigo-100" />,
+    title: "Affordable",
+    desc: "Budget-friendly options",
+  },
+  {
+    icon: <Lock className="w-6 h-6 text-indigo-100" />,
+    title: "Secure",
+    desc: "Safe transactions",
+  },
+  {
+    icon: <Smartphone className="w-6 h-6 text-indigo-100" />,
+    title: "Convenient",
+    desc: "Mobile-friendly platform",
+  },
+  {
+    icon: <Trophy className="w-6 h-6 text-indigo-100" />,
+    title: "Verified",
+    desc: "Trusted listings",
+  },
+  {
+    icon: <RefreshCw className="w-6 h-6 text-indigo-100" />,
+    title: "Efficient",
+    desc: "Time-saving solution",
+  },
+  {
+    icon: <MessageCircle className="w-6 h-6 text-indigo-100" />,
+    title: "Support",
+    desc: "24/7 assistance",
+  },
+  {
+    icon: <BarChart3 className="w-6 h-6 text-indigo-100" />,
+    title: "Transparent",
+    desc: "Clear pricing & reviews",
+  },
+];
+
 const About = () => {
   return (
     <div className="min-h-screen bg-linear-to-br from-gray-50 to-blue-50 py-22">
@@ -17,7 +63,7 @@ const About = () => {
         {/* Mission & Vision */}
         <div className="grid md:grid-cols-2 gap-12 mb-16">
           <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
-            <div className="text-blue-600 text-4xl mb-4">🎯</div>
+            <div className="text-blue-600 text-4xl mb-4"><MinusSquareIcon /></div>
             <h2 className="text-2xl font-bold text-gray-800 mb-4">
               Our Mission
             </h2>
@@ -30,7 +76,7 @@ const About = () => {
           </div>
 
           <div className="bg-white rounded-2xl shadow-lg p-8 hover:shadow-xl transition-shadow duration-300">
-            <div className="text-purple-600 text-4xl mb-4">🔭</div>
+            <div className="text-purple-600 text-4xl mb-4"><MinusSquareIcon /></div>
             <h2 className="text-2xl font-bold text-gray-800 mb-4">
               Our Vision
             </h2>
@@ -113,7 +159,7 @@ const About = () => {
           <div className="grid md:grid-cols-3 gap-8">
             {[
               {
-                icon: "🔍",
+                icon: <Search className="text-blue-600 w-10 h-10 mb-4 mx-auto" />,
                 title: "For Students",
                 steps: [
                   "Create your student profile",
@@ -124,7 +170,7 @@ const About = () => {
                 ],
               },
               {
-                icon: "🏠",
+                icon: <Home className="text-purple-600 w-10 h-10 mb-4 mx-auto" />,
                 title: "For Lodge Owners",
                 steps: [
                   "Register your business account",
@@ -135,7 +181,7 @@ const About = () => {
                 ],
               },
               {
-                icon: "🛡️",
+                icon: <Gauge className="text-red-600 w-10 h-10 mb-4 mx-auto" />,
                 title: "Safety & Security",
                 steps: [
                   "Verified user profiles",
@@ -176,32 +222,7 @@ const About = () => {
             Why Choose StudentLodge?
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                icon: "⚡",
-                title: "Fast & Easy",
-                desc: "Quick booking process",
-              },
-              {
-                icon: "💰",
-                title: "Affordable",
-                desc: "Budget-friendly options",
-              },
-              { icon: "🔒", title: "Secure", desc: "Safe transactions" },
-              {
-                icon: "📱",
-                title: "Convenient",
-                desc: "Mobile-friendly platform",
-              },
-              { icon: "🏆", title: "Verified", desc: "Trusted listings" },
-              { icon: "🔄", title: "Efficient", desc: "Time-saving solution" },
-              { icon: "💬", title: "Support", desc: "24/7 assistance" },
-              {
-                icon: "📊",
-                title: "Transparent",
-                desc: "Clear pricing & reviews",
-              },
-            ].map((feature, index) => (
+            {features.map((feature, index) => (
               <div
                 key={index}
                 className="text-center p-4 bg-white/10 rounded-xl backdrop-blur-sm"

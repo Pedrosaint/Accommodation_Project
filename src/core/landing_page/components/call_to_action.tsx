@@ -20,28 +20,28 @@ const LodgeOwnerCTA = () => {
       title: "Reach Thousands of Students",
       description:
         "Connect directly with verified students actively searching for accommodation.",
-      linear: "from-blue-500 to-cyan-500",
+      linear: "",
     },
     {
       icon: Wallet,
       title: "Manage Bookings & Payments",
       description:
         "Handle all reservations, payments, and transactions in one centralized dashboard.",
-      linear: "from-purple-500 to-pink-500",
+      linear: "",
     },
     {
       icon: Clock,
       title: "Save Time & Go Paperless",
       description:
         "Eliminate manual paperwork and streamline your operations with digital tools.",
-      linear: "from-orange-500 to-red-500",
+      linear: "",
     },
     {
       icon: TrendingUp,
       title: "Maximize Your Revenue",
       description:
         "Optimize pricing and occupancy rates with our smart analytics and insights.",
-      linear: "from-green-500 to-emerald-500",
+      linear: "",
     },
   ];
 
@@ -55,14 +55,7 @@ const LodgeOwnerCTA = () => {
   return (
     <section className="relative py-20 px-4 overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-linear-to-br from-gray-900 via-blue-900 to-purple-900" />
-
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 opacity-20">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500 rounded-full blur-3xl animate-float-delayed" />
-        <div className="absolute top-1/2 left-1/2 w-96 h-96 bg-pink-500 rounded-full blur-3xl animate-pulse" />
-      </div>
+      <div className="absolute inset-0 bg-blue-900" />
 
       {/* Grid Pattern Overlay */}
       <div
@@ -152,7 +145,7 @@ const LodgeOwnerCTA = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <button className="group relative px-8 py-4 bg-linear-to-r from-yellow-400 via-orange-500 to-pink-500 text-white font-bold rounded-xl shadow-2xl hover:shadow-orange-500/50 transition-all duration-300 hover:scale-105 overflow-hidden">
+              <button className="group relative px-8 py-4 bg-orange-600 text-white font-bold rounded-xl shadow-2xl hover:shadow-orange-500/50 transition-all duration-300 hover:scale-105 overflow-hidden">
                 <span className="relative z-10 flex items-center justify-center gap-2">
                   List Your Property Today
                   <ArrowRight
@@ -191,7 +184,7 @@ const LodgeOwnerCTA = () => {
             <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-3xl p-8 shadow-2xl">
               {/* Header */}
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-linear-to-br from-yellow-400 to-orange-500 rounded-xl flex items-center justify-center">
+                <div className="w-12 h-12  rounded-xl flex items-center justify-center">
                   <BarChart3 size={24} className="text-white" />
                 </div>
                 <div>
@@ -251,7 +244,7 @@ const LodgeOwnerCTA = () => {
               {/* Testimonial */}
               <div className="mt-6 pt-6 border-t border-white/10">
                 <div className="flex items-start gap-3">
-                  <div className="w-12 h-12 bg-linear-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold shrink-0">
+                  <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold shrink-0">
                     JD
                   </div>
                   <div>
@@ -266,10 +259,6 @@ const LodgeOwnerCTA = () => {
                 </div>
               </div>
             </div>
-
-            {/* Floating Elements */}
-            <div className="absolute -top-6 -right-6 w-24 h-24 bg-linear-to-br from-yellow-400 to-orange-500 rounded-full blur-2xl opacity-50 animate-pulse" />
-            <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-linear-to-br from-blue-400 to-purple-500 rounded-full blur-2xl opacity-50 animate-pulse" />
           </div>
         </div>
       </div>

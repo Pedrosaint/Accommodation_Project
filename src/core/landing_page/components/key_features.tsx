@@ -171,16 +171,14 @@ const KeyFeaturesBenefits = () => {
           style={{ animation: "fadeInDown 0.6s ease-out" }}
         >
           <div className="inline-flex items-center gap-2 mb-4">
-            <Sparkles className="text-blue-600 animate-pulse" size={24} />
             <span className="text-sm font-semibold text-blue-600 uppercase tracking-wider">
               Why Choose Us
             </span>
-            <Sparkles className="text-purple-600 animate-pulse" size={24} />
           </div>
 
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Key Features &{" "}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-purple-600">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-indigo-700">
               Benefits
             </span>
           </h2>
@@ -201,7 +199,7 @@ const KeyFeaturesBenefits = () => {
               onClick={() => setActiveTab("students")}
               className={`flex items-center gap-2 px-8 py-4 rounded-xl font-semibold transition-all duration-300 ${
                 activeTab === "students"
-                  ? "bg-linear-to-r from-blue-600 to-purple-600 text-white shadow-lg"
+                  ? "bg-linear-to-r from-blue-600 to-indigo-700 text-white shadow-lg"
                   : "text-gray-600 hover:text-gray-900"
               }`}
             >
@@ -212,7 +210,7 @@ const KeyFeaturesBenefits = () => {
               onClick={() => setActiveTab("owners")}
               className={`flex items-center gap-2 px-8 py-4 rounded-xl font-semibold transition-all duration-300 ${
                 activeTab === "owners"
-                  ? "bg-linear-to-r from-blue-600 to-purple-600 text-white shadow-lg"
+                  ? "bg-linear-to-r from-blue-600 to-indigo-700 text-white shadow-lg"
                   : "text-gray-600 hover:text-gray-900"
               }`}
             >
@@ -340,7 +338,7 @@ const KeyFeaturesBenefits = () => {
           style={{ animation: "fadeInUp 0.6s ease-out 0.8s both" }}
         >
           <div className="inline-flex flex-col sm:flex-row items-center gap-4">
-            <button className="group px-8 py-4 bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 flex items-center gap-2">
+            <button className="group px-8 py-4 bg-linear-to-r from-blue-600 to-indigo-700 text-white font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 flex items-center gap-2">
               {activeTab === "students"
                 ? "Find Accommodation"
                 : "List Your Property"}

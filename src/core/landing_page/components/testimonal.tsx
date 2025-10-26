@@ -6,7 +6,6 @@ import {
   CheckCircle2,
   Users,
   Building2,
-  Sparkles,
   ChevronLeft,
   ChevronRight,
 } from "lucide-react";
@@ -111,24 +110,14 @@ const TestimonialsSection = () => {
           style={{ animation: "fadeInDown 0.6s ease-out" }}
         >
           <div className="inline-flex items-center gap-2 mb-4">
-            <Heart
-              className="text-red-500 animate-pulse"
-              size={24}
-              fill="currentColor"
-            />
             <span className="text-sm font-semibold text-blue-600 uppercase tracking-wider">
               Success Stories
             </span>
-            <Heart
-              className="text-red-500 animate-pulse"
-              size={24}
-              fill="currentColor"
-            />
           </div>
 
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             What Our{" "}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-purple-600">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-indigo-700">
               Users Say
             </span>
           </h2>
@@ -276,10 +265,10 @@ const TestimonialsSection = () => {
                 key={index}
                 className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 text-center"
               >
-                <div className="w-12 h-12 bg-linear-to-br from-blue-500 to-purple-500 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                <div className="w-12 h-12 bg-linear-to-br from-blue-500 to-indigo-700 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                   <Icon size={24} className="text-white" />
                 </div>
-                <div className="text-3xl font-bold text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-purple-600 mb-2">
+                <div className="text-3xl font-bold text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-indigo-700 mb-2">
                   {stat.value}
                 </div>
                 <div className="text-sm text-gray-600 font-medium">
@@ -296,12 +285,11 @@ const TestimonialsSection = () => {
           style={{ animation: "fadeInUp 0.6s ease-out 0.6s both" }}
         >
           <div className="inline-flex flex-col items-center gap-4 bg-linear-to-r from-blue-50 to-purple-50 border-2 border-blue-200 rounded-2xl p-8">
-            <Sparkles className="text-blue-600" size={32} />
             <h3 className="text-2xl font-bold text-gray-900">
               Ready to Join Them?
             </h3>
             <p className="text-gray-600 mb-4">Start your success story today</p>
-            <button className="px-8 py-4 bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+            <button className="px-8 py-4 bg-linear-to-r from-blue-600 to-indigo-700 text-white font-bold rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
               Get Started Now
             </button>
           </div>

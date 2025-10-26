@@ -19,9 +19,8 @@ const Footer = () => {
   const footerLinks = {
     company: [
       { name: "About Us", path: "/about" },
-      { name: "Our Mission", path: "/mission" },
-      { name: "Careers", path: "/careers" },
-      { name: "Press", path: "/press" },
+      { name: "Find Accommodations", path: "/list_of_accommodation" },
+      { name: "Contact Us", path: "/contact" },
     ],
     support: [
       { name: "Help Center", path: "/help" },

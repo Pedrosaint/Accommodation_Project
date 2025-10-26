@@ -10,6 +10,7 @@ import {
   Bed,
   Car,
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 interface Accommodation {
   id: number;
@@ -25,6 +26,7 @@ interface Accommodation {
 }
 
 const FeaturedAccommodations = () => {
+  const navigate = useNavigate();
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   const accommodations: Accommodation[] = [
@@ -102,16 +104,16 @@ const FeaturedAccommodations = () => {
           style={{ animation: "fadeInDown 0.6s ease-out" }}
         >
           <div className="inline-flex items-center gap-2 mb-4">
-            <div className="w-12 h-1 bg-linear-to-r from-blue-600 to-purple-600 rounded-full" />
+            <div className="w-12 h-1 bg-linear-to-r from-blue-600 to-indigo-700 rounded-full" />
             <span className="text-sm font-semibold text-blue-600 uppercase tracking-wider">
               Premium Selection
             </span>
-            <div className="w-12 h-1 bg-linear-to-r from-purple-600 to-blue-600 rounded-full" />
+            <div className="w-12 h-1 bg-linear-to-r from-blue-600 to-indigo-700 rounded-full" />
           </div>
 
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
             Featured Student{" "}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-purple-600">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-indigo-700">
               Accommodations
             </span>
           </h2>
@@ -223,7 +225,12 @@ const FeaturedAccommodations = () => {
                     </div>
 
                     {/* View Details Button */}
-                    <button className="w-full bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-2.5 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg">
+                    <button
+                      onClick={() =>
+                        navigate(`/view_accommodation/${accommodation.id}`)
+                      }
+                      className="w-full bg-linear-to-r from-blue-600 to-indigo-700 hover:scale-105 text-white py-2.5 rounded-xl font-semibold transition-all duration-300 flex items-center justify-center gap-2 group-hover:shadow-lg"
+                    >
                       View Details
                       <ArrowRight
                         size={16}
@@ -251,7 +258,9 @@ const FeaturedAccommodations = () => {
           className="text-center"
           style={{ animation: "fadeInUp 0.6s ease-out 0.4s both" }}
         >
-          <button className="group inline-flex items-center gap-3 px-8 py-4 bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white text-lg font-bold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+          <button 
+          onClick={() => navigate("/list_of_accommodation")}
+          className="group inline-flex items-center gap-3 px-8 py-4 bg-linear-to-r from-blue-600 to-indigo-700 text-white text-lg font-bold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
             <span>Browse All Accommodations</span>
             <ArrowRight
               size={24}

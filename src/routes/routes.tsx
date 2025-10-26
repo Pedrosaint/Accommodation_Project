@@ -10,6 +10,8 @@ import About from "../core/landing_page/components/about";
 import Contact from "../core/landing_page/components/contact";
 import OwnerLayout from "../layout/owner_layout";
 import OwnerDashboardView from "../core/landlord_dashboard/domain/dashboard/view/owner_dashboard.view";
+import ViewAccommodationPage from "../core/landing_page/components/view_accommodation.page";
+import ListOfAccommodation from "../core/landing_page/components/list_of_accommodation";
 
 export default function appRouter(): RouteObject[] {
   return [
@@ -29,7 +31,15 @@ export default function appRouter(): RouteObject[] {
         {
             path: "/contact",
             Component: Contact,
-        }
+        },
+        {
+          path: "/view_accommodation/:id",
+          Component: ViewAccommodationPage,
+        },
+        {
+          path: "/list_of_accommodation",
+          Component: ListOfAccommodation,
+        },
       ],
     },
 

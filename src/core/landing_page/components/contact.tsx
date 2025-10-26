@@ -1,4 +1,4 @@
- import { Mail, MapPin, MessageSquare, Phone } from "lucide-react";
+ import { AlertCircle, CreditCard, Mail, MapPin, MessageSquare, Phone, ShieldAlert } from "lucide-react";
 import { useState } from "react";
 
 // Define TypeScript interfaces
@@ -97,7 +97,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-gray-50 to-blue-50 py-12">
+    <div className="min-h-screen bg-linear-to-br from-gray-50 to-blue-50 py-22">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <div className="text-center mb-16">
@@ -135,7 +135,7 @@ const Contact = () => {
                   description: "Instant help available",
                 },
                 {
-                  icon: <MapPin size={24} />,   
+                  icon: <MapPin size={24} />,
                   title: "Office",
                   content: "Lagos, Nigeria",
                   description: "Visit our main office",
@@ -202,7 +202,7 @@ const Contact = () => {
             </div>
 
             {/* Support Hours */}
-            <div className="bg-linear-to-r from-blue-600 to-purple-600 rounded-2xl p-6 text-white">
+            <div className="bg-linear-to-r from-blue-600 to-indigo-700 rounded-2xl p-6 text-white">
               <h3 className="text-xl font-bold mb-4">Support Hours</h3>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
@@ -220,7 +220,7 @@ const Contact = () => {
               </div>
               <div className="mt-4 p-3 bg-white/20 rounded-lg">
                 <p className="text-sm">
-                  🚨 Emergency support available 24/7 for urgent accommodation
+                  Emergency support available 24/7 for urgent accommodation
                   issues
                 </p>
               </div>
@@ -228,7 +228,7 @@ const Contact = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white rounded-2xl shadow-xl p-8">
+          <div className="bg-white rounded-2xl shadow-xl p-8 self-start">
             {isSubmitted ? (
               <div className="text-center py-12">
                 <div className="text-6xl mb-4">🎉</div>
@@ -418,7 +418,7 @@ const Contact = () => {
                     className={`w-full py-4 px-6 rounded-lg font-semibold text-white focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all ${
                       isSubmitting
                         ? "bg-gray-400 cursor-not-allowed"
-                        : "bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 focus:ring-blue-500 shadow-lg hover:shadow-xl"
+                        : "bg-linear-to-r from-blue-600 to-indigo-700 hover:from-blue-700 hover:to-purple-700 focus:ring-blue-500 shadow-lg hover:shadow-xl"
                     }`}
                   >
                     {isSubmitting ? (
@@ -469,7 +469,7 @@ const Contact = () => {
           <div className="grid md:grid-cols-3 gap-6 text-center">
             {[
               {
-                icon: "🚨",
+                icon: <AlertCircle size={24} />,
                 title: "Urgent Accommodation Issue",
                 description:
                   "Contact emergency support for immediate assistance with critical accommodation problems",
@@ -477,7 +477,7 @@ const Contact = () => {
                 phone: "+234 800 911 1199",
               },
               {
-                icon: "💳",
+                icon: <CreditCard size={24} />,
                 title: "Payment Problems",
                 description:
                   "Having issues with payments or refunds? Get quick resolution",
@@ -485,7 +485,7 @@ const Contact = () => {
                 email: "payments@studentlodgenigeria.com",
               },
               {
-                icon: "🔐",
+                icon: <ShieldAlert size={24} />,
                 title: "Account Security",
                 description:
                   "Report security concerns or suspicious activities immediately",
