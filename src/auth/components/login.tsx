@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom"; // If using React Router
+import { Link, useNavigate, } from "react-router-dom"; // If using React Router
 
 // Define types for our form data and errors
 interface LoginFormData {
@@ -16,6 +16,7 @@ interface LoginErrors {
 }
 
 const Login = () => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState<LoginFormData>({
     email: "",
     password: "",
@@ -215,6 +216,7 @@ const Login = () => {
             {/* Submit Button */}
             <button
               type="submit"
+              onClick={()=> navigate('/lodge_owner/dashboard')}
               disabled={isLoading}
               className={`w-full py-3 px-4 rounded-lg font-semibold text-white focus:outline-none focus:ring-2 focus:ring-offset-2 transition-all ${
                 isLoading

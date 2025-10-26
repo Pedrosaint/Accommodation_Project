@@ -4,9 +4,9 @@ interface HeaderProps {
   setSidebarOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const OwnerHeader = ({ setSidebarOpen }: HeaderProps) => {
+const StudentHeader = ({ setSidebarOpen }: HeaderProps) => {
   return (
-    <header className="flex items-center justify-between bg-white shadow px-6 py-4">
+    <header className="flex items-center justify-between border-b border-gray-200 bg-white shadow px-6 py-4">
       {/* Mobile menu button */}
       <button
         className="lg:hidden p-2 text-gray-700 hover:bg-gray-100 rounded-md"
@@ -16,7 +16,7 @@ const OwnerHeader = ({ setSidebarOpen }: HeaderProps) => {
       </button>
 
       {/* Title */}
-      <h1 className="text-lg font-semibold text-gray-700">Owner Dashboard</h1>
+      <h1 className="text-lg font-semibold text-gray-700">Student Dashboard</h1>
 
       {/* Right side */}
       <div className="flex items-center gap-4">
@@ -31,11 +31,11 @@ const OwnerHeader = ({ setSidebarOpen }: HeaderProps) => {
             alt="Avatar"
             className="w-8 h-8 rounded-full"
           />
-          <span className="text-sm font-medium text-gray-700">John Doe</span>
+          <span className="text-sm font-medium text-gray-700">Amaka</span>
         </div>
       </div>
     </header>
   );
 };
 
-export default OwnerHeader;
+export default StudentHeader;

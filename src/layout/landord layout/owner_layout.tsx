@@ -7,19 +7,21 @@ const OwnerLayout = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-gray-50 flex">
+    <div className="flex h-screen bg-gray-50 overflow-hidden">
       {/* Sidebar */}
       <OwnerSidebar sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
 
-      {/* Main Content */}
-      <div className="flex-1 flex flex-col">
+      {/* Main content area */}
+      <div className="flex-1 flex flex-col overflow-hidden">
         {/* Header */}
         <OwnerHeader setSidebarOpen={setSidebarOpen} />
 
-        {/* Page Content */}
-        <main className="flex-1 p-6 overflow-y-auto">
-          <Outlet /> {/* nested route content */}
-        </main>
+        {/* Scrollable content */}
+        <div className="flex-1 overflow-y-auto">
+          <div className="min-h-full px-3 py-6">
+            <Outlet />
+          </div>
+        </div>
       </div>
     </div>
   );

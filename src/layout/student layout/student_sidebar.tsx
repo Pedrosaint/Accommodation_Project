@@ -1,4 +1,4 @@
-import { Home, Building, Calendar, CreditCard, User } from "lucide-react";
+import { Home, Building } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 
 interface SidebarProps {
@@ -7,18 +7,19 @@ interface SidebarProps {
 }
 
 const navLinks = [
-  { name: "Dashboard", path: "/owner/dashboard", icon: <Home size={18} /> },
   {
-    name: "Properties",
-    path: "/owner/properties",
+    name: "Dashboard",
+    path: "/student/dashboard",
+    icon: <Home size={18} />,
+  },
+  {
+    name: "Payments",
+    path: "/student/payments",
     icon: <Building size={18} />,
   },
-  { name: "Bookings", path: "/owner/bookings", icon: <Calendar size={18} /> },
-  { name: "Payments", path: "/owner/payments", icon: <CreditCard size={18} /> },
-  { name: "Profile", path: "/owner/profile", icon: <User size={18} /> },
 ];
 
-export default function OwnerSidebar({
+export default function StudentSidebar({
   sidebarOpen,
   setSidebarOpen,
 }: SidebarProps) {

@@ -1,7 +1,7 @@
 import Dashboard from "../components/dashboard"
 
 
-const OwnerDashboardView = () => {
+const StudentDashboardView = () => {
   return (
     <div>
       <Dashboard />
@@ -9,4 +9,4 @@ const OwnerDashboardView = () => {
   )
 }
 
-export default OwnerDashboardView
+export default StudentDashboardView

@@ -11,8 +11,8 @@ import {
   Bed,
   Car,
   ArrowRight,
-  Grid3x3,
-  List,
+//   Grid3x3,
+//   List,
   X,
 } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -33,7 +33,7 @@ interface Accommodation {
 
 const ListOfAccommodation = () => {
   const navigate = useNavigate();
-  const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
+  const [viewMode] = useState<"grid" | "list">("grid");
   const [showFilters, setShowFilters] = useState(false);
   const [selectedLocation, setSelectedLocation] = useState("all");
   const [priceRange, setPriceRange] = useState([0, 500000]);
@@ -198,7 +198,7 @@ const ListOfAccommodation = () => {
             </button>
 
             {/* View Toggle */}
-            <div className="flex bg-white border border-gray-300 rounded-lg overflow-hidden">
+            {/* <div className="flex bg-white border border-gray-300 rounded-lg overflow-hidden">
               <button
                 onClick={() => setViewMode("grid")}
                 className={`px-4 py-3 ${
@@ -219,7 +219,7 @@ const ListOfAccommodation = () => {
               >
                 <List size={20} />
               </button>
-            </div>
+            </div> */}
           </div>
 
           {/* Active Filters Display */}
@@ -343,7 +343,7 @@ const ListOfAccommodation = () => {
           {/* Results Section */}
           <div className="flex-1">
             {/* Results Header */}
-            <div className="flex items-center justify-between mb-6">
+            <div className="flex flex-col md:flex-row md:items-center space-y-2 justify-between mb-6">
               <div>
                 <h2 className="text-xl font-bold text-gray-900">
                   {accommodations.length} Properties Found
